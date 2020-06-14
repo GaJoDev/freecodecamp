@@ -1,0 +1,285 @@
+/*global*/
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	font-family: "Roboto", sans-serif;
+	background-color: #d9ebe9;
+}
+
+.colorpalette {
+	color: #d9ebe9 #798f8c #44535e #0e1821 #000000;
+}
+
+.container {
+	width: 80%;
+	margin: auto;
+}
+
+.clearfix::after {
+	content: "";
+	clear: both;
+	display: table;
+}
+
+#video-section,
+#form-section,
+#product-section {
+	padding-top: 110px;
+}
+
+h1 {
+	text-transform: uppercase;
+	margin: 0 30px 10px 30px;
+	text-align: center;
+	font-size: 2em;
+}
+
+/*HEADER*/
+header {
+	background-color: #44535e;
+	color: #d9ebe9;
+	position: fixed;
+	width: 100%;
+	height: 90px;
+	/*stops any other content from covering the navigation*/
+	z-index: 1;
+}
+
+/*Image div*/
+#logo {
+	float: left;
+}
+
+#header-img {
+	padding: 25px 0 10px 0;
+	width: 80px;
+}
+
+/*navigation <ul>*/
+#nav-bar {
+	float: right;
+	margin: 0;
+	padding: 40px 0 0 0;
+}
+
+#nav-bar ul li {
+	display: inline;
+}
+
+nav a {
+	color: #d9ebe9;
+	text-decoration: none;
+	text-transform: uppercase;
+	font-size: 16px;
+	padding-left: 2em;
+	letter-spacing: 0.1em;
+	font-weight: bold;
+}
+
+nav a:hover {
+	color: #798f8c;
+}
+
+/*SHOWCASE*/
+#showcase-section {
+	text-align: center;
+	background: url(https://i.picsum.photos/id/135/2560/1920.jpg?hmac=MAh0eBIqBNEgND6D2vgcIBIQ4BE1jzewN1QQWDfBBEY)
+		no-repeat;
+	height: 100vh;
+	width: 100%;
+	background-size: cover;
+	background-position: center;
+	/*set items to display as a column via flexbox*/
+	display: flex;
+	flex-direction: column;
+	/*move content to the center vertically*/
+	justify-content: center;
+	/*move content to the center horizontally*/
+	align-items: center;
+	color: #d9ebe9;
+	text-shadow: 1px 2px 4px #000000;
+}
+#showcase-section img {
+	height: 300px;
+	padding-bottom: 100px;
+}
+
+.showcase-h1 {
+	letter-spacing: 4px;
+	font-size: 2.4em;
+	font-weight: bolder;
+	text-transform: uppercase;
+}
+
+/*VIDEO*/
+
+#video-section {
+	padding: 110px 0 20px 0;
+	text-align: center;
+}
+
+#video-section h1 {
+	background-color: #798f8c;
+	border-bottom: solid 2px #0e1821;
+}
+
+#video-section .responsive {
+	height: 0%;
+	position: relative;
+	margin: 0 auto;
+	overflow: hidden;
+	padding-top: 56.25%; /* 16:9, for an aspect ratio of 1:1 change to this value to 100% */
+}
+
+#video-section iframe {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+
+/*FORM*/
+
+#form-section form {
+	height: 100px;
+	text-align: center;
+}
+
+#form-section h1 {
+	background-color: #798f8c;
+	border-bottom: solid 2px #0e1821;
+}
+
+#form-section label {
+	font-size: 1.5em;
+}
+
+/*FORM*/
+
+#form [type="email"] {
+	height: 30px;
+	width: 250px;
+	border: 0;
+}
+
+#submit {
+	border: 0;
+	height: 30px;
+	background-color: #0e1821;
+	color: #d9ebe9;
+	padding: 0 10px;
+}
+
+label {
+	padding-right: 10px;
+}
+
+/*PRODUCT SECTION*/
+
+#product-section h1 {
+	background-color: #798f8c;
+	border-bottom: solid 2px #0e1821;
+}
+
+.product {
+	background-color: #d9ebe9;
+	float: left;
+	width: 30%;
+	padding: 10px;
+	margin: 10px 5% 10px 0;
+	box-shadow: 1px 3px 5px -3px rgba(0, 0, 0, 0.75);
+}
+
+.product-last {
+	margin: 10px 0 10px 0;
+}
+
+.product img {
+	max-width: 100%;
+	height: auto;
+	margin: 0 0 10px 0;
+	padding: 0 10px;
+}
+
+.product h2 {
+	text-align: center;
+	padding: 10px 0;
+	margin: 10px 0;
+}
+
+.product p {
+	padding: 10px;
+}
+
+/*FOOTER*/
+footer {
+	clear: both;
+	background-color: #44535e;
+	color: #d9ebe9;
+	width: 100%;
+	height: 250px;
+}
+
+/*=============================================
+=            MEDIA QUERIES            =
+=============================================*/
+
+@media only screen and (max-width: 750px) {
+	/*HEADER*/
+	header {
+		background-color: #44535e;
+		position: fixed;
+		width: 100%;
+		height: 90px;
+		/*stops any other content from covering the navigation*/
+		z-index: 1;
+	}
+
+	#logo,
+	#nav-bar,
+	#product-section,
+	.product {
+		float: none;
+		text-align: center;
+		width: 100%;
+	}
+
+	#header-img {
+		padding: 8px 0;
+		background-color: #44535e;
+		width: 60px;
+	}
+
+	#nav-bar {
+		margin: 0;
+		padding: 0;
+		font-family: Arial, Helvetica, sans-serif;
+	}
+
+	#nav-bar ul li {
+		display: inline;
+		padding: 5px 5px 5px 3px;
+	}
+
+	#nav-bar ul li a {
+		color: white;
+		text-decoration: none;
+		text-transform: uppercase;
+		font-size: 10px;
+		font-weight: bold;
+	}
+
+	footer {
+		background-color: #44535e;
+		color: #d9ebe9;
+		width: 100%;
+		height: 250px;
+	}
+}
+
+/*=====  End of MEDIA QUERIES  ======*/

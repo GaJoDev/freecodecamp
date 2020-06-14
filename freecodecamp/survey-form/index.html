@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="stylesheet" href="style.css">
+      <title>Survey Form</title>
+   </head>
+   <body>
+      <div class="container">
+         <main id="main">
+            <div class="section">
+               <h1 id="title">Survey Form</h1>
+               <p id="description">A form to input information</p>
+            </div>
+            <form id="survey-form">
+               <div class="section">
+                  <label id="name-label" class="section-title" >Enter Name</label>
+                  <input id="name" placeholder="Enter Name Here" required></input>
+               </div>
+
+               <div class="section">
+                  <label id="email-label" class="section-title">Enter email</label>
+                  <input id="email" type="email" placeholder="Enter email Here" required></input>
+               </div>
+
+               <div class="section">
+                  <label id="number-label" class="section-title">Enter a Number between 1 and 5</label>
+                  <input id="number" type="number" placeholder="No." min="1" max="5"></input>
+               </div>
+
+               <div class="section">
+                  <label id="dropdown-label" class="section-title">Select an Option</label>
+                  <select id="dropdown">
+                     <option value="option1">Option 1</option>
+                     <option value="option2">Option 2</option>
+                     <option value="option3">Option 3</option>
+                     <option value="option4">Option 4</option>
+                  </select>
+               </div>
+
+               <div class="section">
+                  <label id="gender-label" class="section-title">Select your Gender</label>
+                  <input type="radio" id="male" name="gender" value="male">
+                  <label for="male">Male</label>
+                  <input type="radio" id="female" name="gender" value="female">
+                  <label for="female">Female</label>
+                  <input type="radio" id="other" name="gender" value="other">
+                  <label for="other">Other</label>
+               </div>
+               
+               <div class="section">
+                  <label id="vehicle-label" class="section-title">Select a Vehicle</label>
+                  <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike">
+                  <label for="vehicle1"> I have a bike</label>
+                  <input type="checkbox" id="vehicle2" name="vehicle2" value="Car">
+                  <label for="vehicle2"> I have a car</label>
+                  <input type="checkbox" id="vehicle3" name="vehicle3" value="Boat">
+                  <label for="vehicle3"> I have a boat</label>
+               </div>
+               <div class="section">
+                  <label id="comments-label" class="section-title">Please leave additional information</label>
+                  <textarea placeholder="area for additional comments"></textarea>
+               </div>
+               
+               <input id="submit" type="submit">
+            </form>
+            <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+         </main>
+      </div>
+   </body>
+</html>
